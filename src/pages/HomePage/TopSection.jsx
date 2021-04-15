@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import BrandLogo from '../../components/BrandLogo'
 import { Marginer } from '../../components/Marginer'
 import { IMAGES } from '../../constants/images'
-import JoinButton from '../../components/Button'
+import Button from '../../components/Button'
 const TopSectionContainer = styled.div`
 	width: 100%;
 	height: 720px;
@@ -63,7 +63,7 @@ function TopSection() {
 						<h3>For the right job</h3>
 
 						<Marginer direction='vertical' margin={15} />
-						<JoinButton>Join Now</JoinButton>
+						<Button>Join Now</Button>
 					</LogoContainer>
 					<StandoutImage>
 						<img src={IMAGES.WORK} alt='best work'></img>

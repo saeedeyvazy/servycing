@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const JoinButton = styled.button`
+const CustomButton = styled.button`
 	background-color: #2a9d8f;
 	border: none;
 	outline: none;
@@ -10,11 +10,15 @@ const JoinButton = styled.button`
 	font-weight: 500px;
 	border-radius: 3px;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 18px;
+	transition: all 200ms ease-in-out;
+	&:hover {
+		background-color: #248b7f;
+	}
 `
 
 function Button({ children }) {
-	return <JoinButton>{children}</JoinButton>
+	return <CustomButton>{children}</CustomButton>
 }
 
 export default Button
