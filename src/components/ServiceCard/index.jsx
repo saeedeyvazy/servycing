@@ -48,6 +48,7 @@ const Title = styled.h2`
 	font-weight: 500;
 	color: #000;
 	text-align: start;
+	text-decoration: none;
 `
 
 const SpecialistName = styled.h4`
