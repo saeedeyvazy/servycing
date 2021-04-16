@@ -61,7 +61,7 @@ function Service() {
 						<ServiceCard key={idx} {...service} />
 					))}
 			</ServiceWrapper>
-			<Marginer direcion='vertical' margin={20} />
+			<Marginer direcion='vertical' margin={30} />
 			<ViewMoreContainer>
 				<ViewMoreButton>View More</ViewMoreButton>
 			</ViewMoreContainer>

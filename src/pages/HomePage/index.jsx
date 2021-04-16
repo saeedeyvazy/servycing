@@ -9,6 +9,7 @@ import TopSection from './TopSection'
 import { deviceSize } from '../../constants/device.size.js'
 import Services from '../../components/Services'
 import { Marginer } from '../../components/Marginer'
+import BottomSection from './BottomSection'
 
 const ContentContainer = styled.div`
 	width: 100%;
@@ -30,6 +31,7 @@ function HomePage() {
 				{/* </ContentContainer> */}
 				<Marginer direction='vertical' margin={50} />
 			</InnerPageContainer>
+			<BottomSection />
 		</PageContainer>
 	)
 }
