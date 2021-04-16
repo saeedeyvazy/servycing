@@ -43,7 +43,7 @@ const BottomContainer = styled.div`
 	padding: 0 10px;
 `
 const Title = styled.h2`
-	font-size: 19px;
+	font-size: 15px;
 	margin: 0;
 	font-weight: 500;
 	color: #000;
