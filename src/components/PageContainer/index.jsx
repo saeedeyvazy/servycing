@@ -20,8 +20,8 @@ export const InnerPageContainer = styled.div`
 	width: 100%;
 	max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : 'auto')};
 	min-height: 70vh;
-	//padding: 1em;
+	padding: 1em;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 `

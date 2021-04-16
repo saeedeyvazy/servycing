@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import BrandLogo from '../../components/BrandLogo'
+import Button from '../../components/Button'
 import { Marginer } from '../../components/Marginer'
 import { IMAGES } from '../../constants/images'
-import Button from '../../components/Button'
 const TopSectionContainer = styled.div`
 	width: 100%;
 	height: 720px;
@@ -50,10 +50,11 @@ const LogoContainer = styled.div`
 	}
 `
 
-function TopSection() {
+function TopSection({ children }) {
 	return (
 		<TopSectionContainer>
 			<BackgroundFilter>
+				{children}
 				<TopSectionInnerContainer>
 					<LogoContainer>
 						<BrandLogo />

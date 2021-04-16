@@ -1,0 +1,9 @@
+{
+	"services": [
+		{
+			"id": 1,
+			"title": "I will landscape your garden",
+			"url": "http://localhost:9000/garden.jpg"
+		}
+	]
+}

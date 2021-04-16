@@ -5,9 +5,13 @@ import { IMAGES } from '../../constants/images'
 const BrandLogoContainer = styled.div`
 	display: flex;
 	align-items: center;
+`
+const Logo = styled.div`
+	width: ${({ size }) => (size ? size + 'px' : '50px')};
+	height: ${({ size }) => (size ? size + 'px' : '50px')};
 	img {
-		width: 50px;
-		height: 50px;
+		width: 100%;
+		height: 100%;
 	}
 `
 
@@ -15,14 +19,16 @@ const Title = styled.h1`
 	color: #fff;
 	font-weight: 700;
 	margin-left: 5px;
-	font-size: 45px;
+	font-size: ${({ size }) => (size ? size + 'px' : '45px')};
 `
 
-function BrandLogo() {
+function BrandLogo({ titleSize, logoSize }) {
 	return (
 		<BrandLogoContainer>
-			<img src={IMAGES.LOGO} alt='logo'></img>
-			<Title>Servycing</Title>
+			<Logo size={logoSize}>
+				<img src={IMAGES.LOGO} alt='logo'></img>
+			</Logo>
+			<Title size={titleSize}>Servycing</Title>
 		</BrandLogoContainer>
 	)
 }

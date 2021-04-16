@@ -7,18 +7,21 @@ const CustomButton = styled.button`
 	outline: none;
 	padding: 10px 20px;
 	color: #fff;
-	font-weight: 500px;
+	font-weight: 500;
 	border-radius: 3px;
 	cursor: pointer;
-	font-size: 18px;
+	font-size: ${({ fontSize }) => (fontSize ? fontSize + 'px' : '18px')};
 	transition: all 200ms ease-in-out;
 	&:hover {
 		background-color: #248b7f;
 	}
+	&:focus {
+		outline: none;
+	}
 `
 
-function Button({ children }) {
-	return <CustomButton>{children}</CustomButton>
+function Button({ children, fontSize }) {
+	return <CustomButton fontSize={fontSize}>{children}</CustomButton>
 }
 
 export default Button
