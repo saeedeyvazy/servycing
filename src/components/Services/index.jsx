@@ -20,7 +20,7 @@ const Title = styled.h1`
 const ServiceWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 `
 
 const ViewMoreContainer = styled.div`
@@ -34,8 +34,10 @@ const ViewMoreButton = styled(Button)`
 	background-color: #f2f2f2;
 	color: #959595;
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+	font-size: 14px;
 	&:hover {
 		background-color: #cacaca;
+		filter: contrast(0.8);
 	}
 `
 

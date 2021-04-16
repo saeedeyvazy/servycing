@@ -34,7 +34,7 @@
 		{
 			"id": 4,
 			"title": "I will landscape your garden",
-			"url": "http://localhost:9000/car.jpg",
+			"url": "http://localhost:9000/flowers.jpg",
 			"rating": 4,
 			"specialist": {
 				"id": 1,
@@ -44,10 +44,20 @@
 		{
 			"id": 5,
 			"title": "I will Manage your teams with strict plan.",
-			"url": "http://localhost:9000/office.jpg",
+			"url": "http://localhost:9000/grass.jpg",
 			"rating": 4,
 			"specialist": {
 				"id": 1,
+				"fullName": "Mark brone"
+			}
+		},
+		{
+			"id": 6,
+			"title": "I will Manage your teams with strict plan.",
+			"url": "http://localhost:9000/car.jpg",
+			"rating": 8,
+			"specialist": {
+				"id": 2,
 				"fullName": "Mark brone"
 			}
 		}

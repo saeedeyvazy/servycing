@@ -18,7 +18,7 @@ export function PageContainer(props) {
 export const InnerPageContainer = styled.div`
 	flex: 1;
 	width: 100%;
-	max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : 'auto')};
+	max-width: ${({ maxWidth }) => (maxWidth ? maxWidth + 'px' : '1170px')};
 	min-height: 70vh;
 	padding: 1em;
 	display: flex;
