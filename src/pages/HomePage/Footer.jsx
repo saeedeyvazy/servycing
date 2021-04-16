@@ -45,6 +45,8 @@ const BottomContainer = styled.div`
 	border-top: 0.6px solid #000000;
 	display: flex;
 	justify-content: space-between;
+	padding: 0 20px;
+	align-items: center;
 `
 const BottomLeftContainer = styled.div`
 	display: flex;
