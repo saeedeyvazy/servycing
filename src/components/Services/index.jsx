@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 import ServiceCard from '../ServiceCard'
+import { Marginer } from '../Marginer'
+import Button from '../Button'
 
 const ServicesContainer = styled.div`
 	width: 100%;
@@ -19,6 +21,22 @@ const ServiceWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+`
+
+const ViewMoreContainer = styled.div`
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+`
+
+const ViewMoreButton = styled(Button)`
+	background-color: #f2f2f2;
+	color: #959595;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+	&:hover {
+		background-color: #cacaca;
+	}
 `
 
 function Service() {
@@ -41,6 +59,10 @@ function Service() {
 						<ServiceCard key={idx} {...service} />
 					))}
 			</ServiceWrapper>
+			<Marginer direcion='vertical' margin={20} />
+			<ViewMoreContainer>
+				<ViewMoreButton>View More</ViewMoreButton>
+			</ViewMoreContainer>
 		</ServicesContainer>
 	)
 }

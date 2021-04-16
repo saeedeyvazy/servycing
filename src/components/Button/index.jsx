@@ -20,8 +20,12 @@ const CustomButton = styled.button`
 	}
 `
 
-function Button({ children, fontSize }) {
-	return <CustomButton fontSize={fontSize}>{children}</CustomButton>
+function Button({ children, fontSize, className }) {
+	return (
+		<CustomButton className={className} fontSize={fontSize}>
+			{children}
+		</CustomButton>
+	)
 }
 
 export default Button
