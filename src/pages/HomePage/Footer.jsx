@@ -30,7 +30,7 @@ const Link = styled.a`
 	cursor: pointer;
 	transition: all 200ms ease-in-out;
 	&:hover {
-		filter: contrast(0.8);
+		color: black;
 	}
 `
 
