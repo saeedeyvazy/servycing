@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import BrandLogo from '../BrandLogo'
 import Button from '../Button'
 import { Marginer } from '../Marginer'
+import {Link} from 'react-router-dom'
 
 const NavContainer = styled.div`
 	width: 100%;
@@ -11,6 +12,7 @@ const NavContainer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 15px;
+	background-color:${({bgColor}) => bgColor ? bgColor : 'transparent' };
 `
 const NavRightContainer = styled.div`
 	height: 100%;
@@ -38,18 +40,29 @@ const Separator = styled.div`
 	height: 45%;
 `
 
-function Navbar() {
+const StyledLink = styled(Link)`
+	text-decoration:none;
+`
+
+
+function Navbar({bgColor}) {
 	return (
-		<NavContainer>
-			<BrandLogo logoSize={25} titleSize={25} />
+		<NavContainer bgColor={bgColor}>
+			<StyledLink to='/'>
+				<BrandLogo logoSize={25} titleSize={25} />
+			</StyledLink>
 			<NavRightContainer>
 				<AnchorLink hasBorder>Specialist Portal</AnchorLink>
 				<Marginer direction='horizontal' margin={10} />
 				<Separator />
 				<Marginer direction='horizontal' margin={10} />
-				<Button fontSize={12}>Register</Button>
+				<Link to='/customer/access/signup'>
+					<Button fontSize={12}>Register</Button>
+				</Link>
 				<Marginer direction='horizontal' margin={8} />
-				<AnchorLink>Login</AnchorLink>
+				<Link to='/customer/access/signin'>
+					<AnchorLink>Login</AnchorLink>
+				</Link>
 			</NavRightContainer>
 		</NavContainer>
 	)

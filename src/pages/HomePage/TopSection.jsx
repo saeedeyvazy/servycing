@@ -4,6 +4,8 @@ import BrandLogo from '../../components/BrandLogo'
 import Button from '../../components/Button'
 import { Marginer } from '../../components/Marginer'
 import { IMAGES } from '../../constants/images'
+import { useMediaQuery } from 'react-responsive'
+import {deviceSize}from '../../constants/device.size'
 const TopSectionContainer = styled.div`
 	width: 100%;
 	height: 720px;
@@ -12,6 +14,9 @@ const TopSectionContainer = styled.div`
 	background-position: 0px -110px;
 	background-size: cover;
 	background-repeat: no-repeat;
+	@media screen and (max-width : ${deviceSize.mobile}px){ 
+		background-position: 0px 0px;
+	}
 `
 
 const BackgroundFilter = styled.div`
@@ -27,6 +32,7 @@ const TopSectionInnerContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	
 `
 
 const StandoutImage = styled.div`
@@ -49,16 +55,25 @@ const LogoContainer = styled.div`
 		margin: 5px;
 		text-align: start;
 	}
+	@media screen and (max-width : ${deviceSize.mobile}px){
+		align-items:center;
+		h3{
+			text-align: center
+		}		
+	}
 `
 
 function TopSection({ children }) {
+
+	const isMobile = useMediaQuery({maxWidth: deviceSize.mobile})
+
 	return (
 		<TopSectionContainer>
 			<BackgroundFilter>
 				{children}
 				<TopSectionInnerContainer>
 					<LogoContainer>
-						<BrandLogo />
+						<BrandLogo logoSize={isMobile ? 25 : undefined} titleSize={isMobile ? 25 : undefined}/>
 						<Marginer direction='vertical' margin={8} />
 
 						<h3>Find the right specialist</h3>
@@ -67,9 +82,11 @@ function TopSection({ children }) {
 						<Marginer direction='vertical' margin={15} />
 						<Button>Join Now</Button>
 					</LogoContainer>
-					<StandoutImage>
-						<img src={IMAGES.WORK} alt='best work'></img>
-					</StandoutImage>
+					{!isMobile &&
+						<StandoutImage>
+							<img src={IMAGES.WORK} alt='best work'></img>
+						</StandoutImage>
+					}
 				</TopSectionInnerContainer>
 			</BackgroundFilter>
 		</TopSectionContainer>

@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import BrandLogo from '../../components/BrandLogo'
 import Button from '../../components/Button'
 import { Marginer } from '../../components/Marginer'
+import { deviceSize } from '../../constants/device.size'
 import { IMAGES } from '../../constants/images'
+import {useMediaQuery} from 'react-responsive'
 
 const BottomContainer = styled.div`
 	width: 100%;
@@ -14,9 +16,6 @@ const BottomContainer = styled.div`
 	align-items: center;
 	margin: 0;
 	padding: 0;
-	@media (max-width: 414px) {
-		flex-direction: column;
-	}
 `
 
 const ContentContainer = styled.div`
@@ -28,8 +27,8 @@ const SpecialistDescContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	@media (max-width: 414px) {
-		order: 2;
+	@media (max-width: ${deviceSize.mobile}px){
+		align-items:center;
 	}
 `
 const SpecialistDesc = styled.h2`
@@ -38,6 +37,9 @@ const SpecialistDesc = styled.h2`
 	margin: 0;
 	line-height: 1.4em;
 	text-align: start;
+	@media  (max-width: ${deviceSize.mobile}px){
+		font-size:25px;
+	}
 `
 const SpecialistImgContainer = styled.div`
 	width: 35em;
@@ -46,13 +48,11 @@ const SpecialistImgContainer = styled.div`
 		height: 100%;
 		width: 100%;
 	}
-	@media (max-width: 414px) {
-		width: 25em;
-		height: 20em;
-		order: 1;
-	}
+	
 `
 function BottomSection() {
+	
+	const isMobile = useMediaQuery({maxWidth: deviceSize.mobile})
 	return (
 		<BottomContainer>
 			<SpecialistDescContainer>
@@ -63,9 +63,10 @@ function BottomSection() {
 				<Marginer direction='vertical' margin={20} />
 				<Button>Join as Specialist</Button>
 			</SpecialistDescContainer>
-			<SpecialistImgContainer>
+
+			{ !isMobile && <SpecialistImgContainer>
 				<img src={IMAGES.FARMING} alt='specialist' />
-			</SpecialistImgContainer>
+			</SpecialistImgContainer>}
 		</BottomContainer>
 	)
 }

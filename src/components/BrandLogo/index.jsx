@@ -5,6 +5,7 @@ import { IMAGES } from '../../constants/images'
 const BrandLogoContainer = styled.div`
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 `
 const Logo = styled.div`
 	width: ${({ size }) => (size ? size + 'px' : '50px')};
@@ -20,6 +21,7 @@ const Title = styled.h1`
 	font-weight: 700;
 	margin-left: 5px;
 	font-size: ${({ size }) => (size ? size + 'px' : '45px')};
+	
 `
 
 function BrandLogo({ titleSize, logoSize }) {

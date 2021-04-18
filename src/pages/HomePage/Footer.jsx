@@ -38,6 +38,7 @@ const LinkContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	text-align:start;
 `
 const BottomContainer = styled.div`
 	width: 100%;
