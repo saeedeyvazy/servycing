@@ -46,7 +46,7 @@ function Service() {
 
 	useEffect(() => {
 		const getServies = async () => {
-			const response = await axios.get('http://localhost:9000/services')
+			const response = await axios.get('https://my-json-server.typicode.com/saeedeyvazy/servycing-api/services')
 			setServices(response.data)
 		}
 		getServies()
